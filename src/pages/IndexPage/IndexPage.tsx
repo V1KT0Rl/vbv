@@ -1,10 +1,12 @@
-import { Placeholder, Steps, Button, } from '@telegram-apps/telegram-ui';
-import {miniApp} from "@tma.js/sdk";
+import { Placeholder, Steps, Button } from '@telegram-apps/telegram-ui';
+import { miniApp } from "@tma.js/sdk";
 import type { FC } from 'react';
 
-import { Page} from '@/components/Page.tsx';
+import { Page } from '@/components/Page.tsx';
+import { useLaunchParams } from '@tma.js/sdk-react';
 
 export const IndexPage: FC = () => {
+  const i = useLaunchParams();
   return (
     <Page back={false}>
       <Steps
@@ -20,6 +22,7 @@ export const IndexPage: FC = () => {
       >
         Action
       </Button>
+      <p>{JSON.stringify(i)}</p>
     </Page>
   );
 };
