@@ -1,4 +1,4 @@
-import { Placeholder, Steps, Button } from '@telegram-apps/telegram-ui';
+import { Steps, Button } from '@telegram-apps/telegram-ui';
 import { miniApp } from "@tma.js/sdk";
 import type { FC } from 'react';
 
